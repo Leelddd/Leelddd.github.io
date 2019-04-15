@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Doned  自然语言处理课程第一次作业：分词/词性标注/实体标注 《深入理解计算机系统》第二章复习 LeetCode 2, 19, 21, 23, 24, 25, 61, 82, 83, 86, 92, 109, 134, 376, 392 LeetCode solution table generate script 基于 hexo 的博客搭建  Detail 自然语言处理第一次作业 对 20">
+<meta name="keywords" content="weekly">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「weekly」20190408-20190414">
+<meta property="og:url" content="http://yoursite.com/2019/04/15/[weekly]20190408-20190414/index.html">
+<meta property="og:site_name" content="Cactus White">
+<meta property="og:description" content="Doned  自然语言处理课程第一次作业：分词/词性标注/实体标注 《深入理解计算机系统》第二章复习 LeetCode 2, 19, 21, 23, 24, 25, 61, 82, 83, 86, 92, 109, 134, 376, 392 LeetCode solution table generate script 基于 hexo 的博客搭建  Detail 自然语言处理第一次作业 对 20">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/1555331603897.png">
+<meta property="og:image" content="http://yoursite.com/images/1555331702380.png">
+<meta property="og:image" content="http://yoursite.com/images/1555332204060.png">
+<meta property="og:updated_time" content="2019-04-15T13:10:56.992Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="「weekly」20190408-20190414">
+<meta name="twitter:description" content="Doned  自然语言处理课程第一次作业：分词/词性标注/实体标注 《深入理解计算机系统》第二章复习 LeetCode 2, 19, 21, 23, 24, 25, 61, 82, 83, 86, 92, 109, 134, 376, 392 LeetCode solution table generate script 基于 hexo 的博客搭建  Detail 自然语言处理第一次作业 对 20">
+<meta name="twitter:image" content="http://yoursite.com/images/1555331603897.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>「weekly」20190408-20190414</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&text=「weekly」20190408-20190414"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&is_video=false&description=「weekly」20190408-20190414"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=「weekly」20190408-20190414&body=Check out this article: http://yoursite.com/2019/04/15/[weekly]20190408-20190414/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&name=「weekly」20190408-20190414&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#doned"><span class="toc-number">1.</span> <span class="toc-text">Doned</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#detail"><span class="toc-number">2.</span> <span class="toc-text">Detail</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自然语言处理第一次作业"><span class="toc-number">2.1.</span> <span class="toc-text">自然语言处理第一次作业</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深入理解计算机系统-第二章复习"><span class="toc-number">2.2.</span> <span class="toc-text">《深入理解计算机系统》第二章复习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leetcode-刷题"><span class="toc-number">2.3.</span> <span class="toc-text">LeetCode 刷题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leetcode-solution-table-generate-script-github"><span class="toc-number">2.4.</span> <span class="toc-text">LeetCode solution table generate script Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于-hexo-的博客搭建"><span class="toc-number">2.5.</span> <span class="toc-text">基于 hexo 的博客搭建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#todo"><span class="toc-number">3.</span> <span class="toc-text">TODO</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        「weekly」20190408-20190414
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">lyd</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-04-14T16:06:11.446Z" itemprop="datePublished">2019-04-15</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/weekly/">weekly</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="doned">Doned</h2>
+<ul>
+<li>自然语言处理课程第一次作业：分词/词性标注/实体标注</li>
+<li>《深入理解计算机系统》第二章复习</li>
+<li>LeetCode 2, 19, 21, 23, 24, 25, 61, 82, 83, 86, 92, 109, 134, 376, 392</li>
+<li><a href="https://github.com/Leelddd/leetcode/blob/master/script/readme.py" target="_blank" rel="noopener">LeetCode solution table generate script</a></li>
+<li>基于 hexo 的博客搭建</li>
+</ul>
+<h2 id="detail">Detail</h2>
+<h3 id="自然语言处理第一次作业">自然语言处理第一次作业</h3>
+<p>对 20000 字左右的医学语料进行分词，词性标注和医学命名实体识别的加工。</p>
+<p><img src="/images/1555331603897.png" alt="原始语料"></p>
+<p><img src="/images/1555331702380.png" alt="加工结果"></p>
+<p>使用 pkuseg 和 thulac 两款分词库进行分词，然后编写程序生成两者结果的对比结果（ 如图3），生成 html 	文件，通过 tag 标记和 css 高亮分词与词性标注的不同处。</p>
+<p><img src="/images/1555332204060.png" alt="1555332204060"></p>
+<p>然后根据 <strong>北京大学现代汉语语料库基本加工规范（2002版）</strong> 与 <strong>医学语料命名实体识别加工规范</strong> 进行人工修正，和人工实体识别标注。</p>
+<h3 id="深入理解计算机系统-第二章复习">《深入理解计算机系统》第二章复习</h3>
+<p>// TODO 笔记待整理</p>
+<h3 id="leetcode-刷题">LeetCode 刷题</h3>
+<p>Stack 专题 / Greedy 专题</p>
+<p>2, 19, 21, 23, 24, 25, 61, 82, 83, 86, 92, 109, 134, 376, 392</p>
+<h3 id="leetcode-solution-table-generate-script-github">LeetCode solution table generate script <a href="https://github.com/Leelddd/leetcode/blob/master/script/readme.py" target="_blank" rel="noopener">Github</a></h3>
+<p>编写脚本通过 API 和本地题解，生成如下格式的 Solution Table</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">#</th>
+<th style="text-align:center">Title</th>
+<th style="text-align:center">Difficulty</th>
+<th style="text-align:center">Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">001</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/two-sum" target="_blank" rel="noopener">Two Sum</a></td>
+<td style="text-align:center">Easy</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/001_Two_Sum.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">002</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/add-two-numbers" target="_blank" rel="noopener">Add Two Numbers</a></td>
+<td style="text-align:center">Medium</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/002_Add_Two_Numbers.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">003</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></td>
+<td style="text-align:center">Medium</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/003_Longest_Substring_Without_Repeating_Characters.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">004</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/median-of-two-sorted-arrays" target="_blank" rel="noopener">Median of Two Sorted Arrays</a></td>
+<td style="text-align:center">Hard</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/004_Median_of_Two_Sorted_Arrays.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">005</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/longest-palindromic-substring" target="_blank" rel="noopener">Longest Palindromic Substring</a></td>
+<td style="text-align:center">Medium</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/005_Longest_Palindromic_Substring.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">006</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/zigzag-conversion" target="_blank" rel="noopener">ZigZag Conversion</a></td>
+<td style="text-align:center">Medium</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/006_ZigZag_Conversion.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">007</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/reverse-integer" target="_blank" rel="noopener">Reverse Integer</a></td>
+<td style="text-align:center">Easy</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/007_Reverse_Integer.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">008</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/string-to-integer-atoi" target="_blank" rel="noopener">String to Integer (atoi)</a></td>
+<td style="text-align:center">Medium</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/008_String_to_Integer.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">009</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/palindrome-number" target="_blank" rel="noopener">Palindrome Number</a></td>
+<td style="text-align:center">Easy</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/009_Palindrome_Number.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+<tr>
+<td style="text-align:center">010</td>
+<td style="text-align:center"><a href="https://leetcode.com/problems/regular-expression-matching" target="_blank" rel="noopener">Regular Expression Matching</a></td>
+<td style="text-align:center">Hard</td>
+<td style="text-align:center"><a href="https://github.com/leelddd/leetcode/blob/master/solution/010_Regular_Expression_Matching.cpp" target="_blank" rel="noopener">cpp</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="基于-hexo-的博客搭建">基于 hexo 的博客搭建</h3>
+<p>基于 hexo 搭建个人博客，基于 <a href="https://github.com/probberechts/hexo-theme-cactus" target="_blank" rel="noopener">cactus</a> 主题自定义样式</p>
+<h2 id="todo">TODO</h2>
+<ul>
+<li>完善 NLP 作业标注结果，撰写文档</li>
+<li>阅读《统计学习方法》前三章</li>
+<li>整理《深入理解计算机系统》笔记，复习第三章</li>
+<li>LeetCode Linked List 专题整理，继续刷 Greedy 专题</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#doned"><span class="toc-number">1.</span> <span class="toc-text">Doned</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#detail"><span class="toc-number">2.</span> <span class="toc-text">Detail</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自然语言处理第一次作业"><span class="toc-number">2.1.</span> <span class="toc-text">自然语言处理第一次作业</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#深入理解计算机系统-第二章复习"><span class="toc-number">2.2.</span> <span class="toc-text">《深入理解计算机系统》第二章复习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leetcode-刷题"><span class="toc-number">2.3.</span> <span class="toc-text">LeetCode 刷题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leetcode-solution-table-generate-script-github"><span class="toc-number">2.4.</span> <span class="toc-text">LeetCode solution table generate script Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于-hexo-的博客搭建"><span class="toc-number">2.5.</span> <span class="toc-text">基于 hexo 的博客搭建</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#todo"><span class="toc-number">3.</span> <span class="toc-text">TODO</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&text=「weekly」20190408-20190414"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&is_video=false&description=「weekly」20190408-20190414"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=「weekly」20190408-20190414&body=Check out this article: http://yoursite.com/2019/04/15/[weekly]20190408-20190414/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&title=「weekly」20190408-20190414"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/15/[weekly]20190408-20190414/&name=「weekly」20190408-20190414&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Lyd
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
