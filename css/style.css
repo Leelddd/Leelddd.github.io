@@ -486,13 +486,12 @@ body {
 .content a {
   color: #383838;
   text-decoration: none;
+}
+.content a:hover {
   background-image: linear-gradient(transparent, transparent 5px, #383838 5px, #383838);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
-}
-.content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #db4d52 4px, #db4d52);
 }
 .content a.icon {
   background: none;
@@ -566,6 +565,7 @@ body {
   }
 }
 #header {
+  text-align: center;
   margin: 0 auto 2rem;
   width: 100%;
 }
@@ -825,11 +825,11 @@ body {
   content: "#";
 }
 #header-post #toc .toc-level-3 {
-  color: #666;
+  color: #d3d3d3;
   font-size: 0.8rem;
 }
 #header-post #toc .toc-level-4 {
-  color: #525252;
+  color: #a9a9a9;
   font-size: 0.4rem;
 }
 #header-post #toc .toc-level-5 {
@@ -997,7 +997,7 @@ body {
   content: "#";
 }
 #footer-post #toc-footer .toc-level-3 {
-  color: #666;
+  color: #d3d3d3;
   font-size: 0.7rem;
   line-height: 15px;
 }
@@ -1025,13 +1025,18 @@ body {
   margin-bottom: 1rem;
   margin-left: 0;
   list-style-type: none;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #e6e6e6;
 }
 .post-list .post-item .meta {
   display: block;
   margin-right: 16px;
   min-width: 100px;
-  color: #666;
-  font-size: 18px;
+  color: #d3d3d3;
+  font-size: 14px;
+}
+.post-list .post-item span a {
+  text-decoration: none;
 }
 @media (min-width: 480px) {
   .post-list .post-item {
@@ -1149,16 +1154,16 @@ article .content blockquote p {
 }
 article .content blockquote footer {
   margin: line-height 0;
-  color: #666;
+  color: #d3d3d3;
   font-size: 11px;
 }
 article .content blockquote footer a {
-  background-image: linear-gradient(transparent, transparent 5px, #666 5px, #666);
-  color: #666;
+  background-image: linear-gradient(transparent, transparent 5px, #d3d3d3 5px, #d3d3d3);
+  color: #d3d3d3;
 }
 article .content blockquote footer a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #858585 4px, #858585);
-  color: #858585;
+  background-image: linear-gradient(transparent, transparent 4px, #dcdcdc 4px, #dcdcdc);
+  color: #dcdcdc;
 }
 article .content blockquote footer cite:before {
   padding: 0 0.5em;
@@ -1215,6 +1220,12 @@ article .content .caption {
     content: "|";
   }
 }
+.gt-comments-null {
+  display: none;
+}
+.gt-container .gt-header-controls-tip {
+  color: #b31b1b;
+}
 #archive .post-list {
   padding: 0;
 }
@@ -1227,7 +1238,7 @@ article .content .caption {
   display: block;
   margin-right: 16px;
   min-width: 100px;
-  color: #666;
+  color: #d3d3d3;
   font-size: 14px;
 }
 @media (min-width: 480px) {
@@ -1248,7 +1259,7 @@ article .content .caption {
   bottom: 0;
   margin-bottom: 10px;
   width: 100%;
-  color: #666;
+  color: #d3d3d3;
   vertical-align: top;
   text-align: center;
   font-size: 11px;
@@ -1275,12 +1286,12 @@ article .content .caption {
   margin-right: 0;
 }
 #footer a {
-  color: #666;
+  color: #d3d3d3;
   text-decoration: underline;
   background-image: none;
 }
 #footer a:hover {
-  color: #858585;
+  color: #dcdcdc;
 }
 #footer .footer-left {
   height: 20px;
@@ -1374,7 +1385,7 @@ article .content .caption {
   color: #383838;
 }
 #tag-cloud .tag-cloud-title {
-  color: #666;
+  color: #d3d3d3;
 }
 #tag-cloud .tag-cloud-tags {
   clear: both;
@@ -1385,10 +1396,10 @@ article .content .caption {
   margin: 10px;
 }
 #categories .category-list-title {
-  color: #666;
+  color: #d3d3d3;
 }
 #categories .category-list .category-list-item .category-list-count {
-  color: #666;
+  color: #d3d3d3;
 }
 #categories .category-list .category-list-item .category-list-count:before {
   content: " (";
@@ -1488,13 +1499,13 @@ code {
 }
 .highlight figcaption {
   margin: -5px 0 5px;
-  color: #757575;
+  color: #d7d7d7;
   font-size: 0.9em;
   zoom: 1;
 }
 .highlight figcaption a {
   float: right;
-  color: #757575;
+  color: #d7d7d7;
   font-style: italic;
   font-size: 0.8em;
   background-image: linear-gradient(transparent, transparent 10px, #db4d52 10px, #db4d52);
@@ -1503,7 +1514,7 @@ code {
   background-repeat: repeat-x;
 }
 .highlight figcaption a:hover {
-  color: #919191;
+  color: #dfdfdf;
 }
 .highlight figcaption:before,
 .highlight figcaption content: "" {
